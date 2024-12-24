@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Технічна підтримка Аврори</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Технічна підтримка Аврори</h1>
+  <p>Оберіть проблему, щоб побачити варіанти рішень:</p>
+  
+  <div class="container">
+    <button id="btn1" class="btn btn-primary button-custom" onclick="toggleSubMenu(event, 'submenu1')">Інтернет не працює</button>
+    <button id="btn2" class="btn btn-secondary button-custom" onclick="toggleSubMenu(event, 'submenu2')">Проблеми з КСО</button>
+    <button id="btn3" class="btn btn-success button-custom" onclick="toggleSubMenu(event, 'submenu3')">Не грає музика</button>
+    <button id="btn4" class="btn btn-danger button-custom" onclick="toggleSubMenu(event, 'submenu4')">Не друкує чек КАСА</button>
+    <button id="btn5" class="btn btn-warning button-custom" onclick="toggleSubMenu(event, 'submenu5')">Не пройшов чек на повернення</button>
+  </div>
+
+  <div id="submenu1" class="submenu">
+    <button class="btn btn-outline-secondary" onclick="showText('text1')">Можливі причини</button>
+    <button class="btn btn-outline-secondary" onclick="showText('text2')">Варіанти вирішення</button>
+    <button class="btn btn-danger" onclick="showText('text3')">Зателефонувати до підтримки</button>
+  </div>
+  <div id="submenu2" class="submenu">
+    <button class="btn btn-outline-secondary" onclick="showText('text4')">Можливі причини</button>
+    <button class="btn btn-outline-secondary" onclick="showText('text5')">Варіанти вирішення</button>
+    <button class="btn btn-danger" onclick="showText('text6')">Зателефонувати до підтримки</button>
+  </div>
+  <div id="submenu3" class="submenu">
+    <button class="btn btn-outline-secondary" onclick="showText('text7')">Можливі причини</button>
+    <button class="btn btn-outline-secondary" onclick="showText('text8')">Варіанти вирішення</button>
+    <button class="btn btn-danger" onclick="showText('text9')">Зателефонувати до підтримки</button>
+  </div>
+  <div id="submenu4" class="submenu">
+    <button class="btn btn-outline-secondary" onclick="showText('text10')">Можливі причини</button>
+    <button class="btn btn-outline-secondary" onclick="showText('text11')">Варіанти вирішення</button>
+    <button class="btn btn-danger" onclick="showText('text12')">Зателефонувати до підтримки</button>
+  </div>
+  <div id="submenu5" class="submenu">
+    <button class="btn btn-outline-secondary" onclick="showText('text13')">Можливі причини</button>
+    <button class="btn btn-outline-secondary" onclick="showText('text14')">Варіанти вирішення</button>
+    <button class="btn btn-danger" onclick="showText('text15')">Зателефонувати до підтримки</button>
+  </div>
+
+  <div id="text1" class="text-container">
+    <p>1. Немає електрики на ТТ.</p>
+    <p>2. Не сплачена послуга.</p>
+    <p>3. Відсутній лінк між роутером та обладнанням провайдера.</p>
+    <p>4. Несправне обладнання на магазині (роутер, Cisco System).</p>
+    <p>5. Немає коммутації між роутером та Cisco System (пошкодженний патчкорд).</p>
+    <p>6. Не "підіймається" VPN тунель по причині некоректних мережевих налаштувань провайдера (блокування портів, немає реального ІР адреса).</p>
+  </div>
+  <div id="text2" class="text-container">
+    <p>- Переконайтесь, що кабель підключений до роутера і комп’ютера.</p>
+    <p>- Перевірити чи всі дроти до кінця підключені. Наприклад: немає лінку між роутером та Cisco Switch - перевірити з'єднання, патч-корд.</p>
+    <p>- Вимкніть роутер з розетки на 30 секунд, потім увімкніть знову для перезавантаження.</p>
+    <p>- Переглянте індекатори роутера та маршрутезатора, переконайтесь що все горить вірно.</p>
+  </div>
+  <div id="text3" class="text-container">
+    <p>Телефон підтримки: 0800-123-456.</p>
+  </div>
+  <div id="text4" class="text-container">
+    <p>1. Зависло КСО.</p>
+    <p>2. Помилка відкриття зміни.</p>
+    <p>3. Зміна відкрита не сьогодні, тобто не закрили в кінці робочого дня.</p>
+    <p>4. Не пройшла оплата.</p>
+    <p>5. Завис чек на КСО.</p>
+  </div>
+  <div id="text5" class="text-container">
+    <p>- Якщо КСО зависло то спробуйте підключитись до неї зі зворотньої сторни за допомогою клавіатури й перезапустити натиснувши комбінацію клавіш ALT+F4 або F5.</p>
+    <p>- Перевірити чи РРО на зв’язку та чи запущена служба GMSKso Api ServerWPID, якщо так - перевірити що пише в логах на базовому ПК.</p>
+    <p>- Якщо зміну закривали, перевіряємо логи/зетки.</p>
+    <p>- Оплата неуспішна – невірний пароль, недостатньо коштів, таймаут, закінчився папір.</p>
+    <p>- Зупиняємо службу -> Відміняємо даний чек -> Запускаємо службу -> Якщо чек на сайті все ще висить - оновлюємо сторінку.</p>
+  </div>
+  <div id="text6" class="text-container">
+    <p>Телефон підтримки: 0800-654-321.</p>
+  </div>
+  <div id="text7" class="text-container">
+    <p>1. Проблема з Orange(Помаранчова коробка).</p>
+    <p>2. Ручка підсилювача.</p>
+    <p>3. Проблема з дротами.</p>
+    <p>4. Не вімкнувся самостійно.</p>
+  </div>
+  <div id="text8" class="text-container">
+    <p>- Перезавантажити Orange.</p>
+    <p>- Змінити кабель аукс.</p>
+    <p>- Спробуйте покрутити ручку підсилювача, можливо просто звук стоїть на мінімум.</p>
+    <p>- Якщо не заграла музика то пропишіть в спеціальній програмі номер магазина й цифру 1 вибравши внутрішній Orange або цифру 2 якщо не грає наружний.</p>
+    <p>- Перевірте всі дроти на підключення й чи вставлені до кінця.</p>
+  </div>
+  <div id="text9" class="text-container">
+    <p>Телефон підтримки: 0800-123-456.</p>
+  </div>
+  <div id="text10" class="text-container">
+    <p>1. Проблема з касою.</p>
+    <p>2. Відсутній лінк.</p>
+    <p>3. Проблема з ПРРО.</p>
+    <p>4. Проблема з інтернет розеткою.</p>
+    <p>5. Закінчилась бумага для друку.</p>
+  </div>
+  <div id="text11" class="text-container">
+    <p>- Перезавантажити ПРРО.</p>
+    <p>- Перевставити в іншу інтернет розетку.</p>
+    <p>- Змінити порт на свічу.</p>
+    <p>- Перевірити живлення в розетці.</p>
+  </div>
+  <div id="text12" class="text-container">
+    <p>Телефон підтримки: 0800-654-321.</p>
+  </div>
+  <div id="text13" class="text-container">
+    <p>1. Не справна система.</p>
+    <p>2. Помилка при поверненні коштів</p>
+  </div>
+  <div id="text14" class="text-container">
+    <p>- Дзвонити на лінію роздрібу через 0.</p>
+  </div>
+  <div id="text15" class="text-container">
+    <p>Телефон підтримки: 0800-654-321.</p>
+  </div>
+
+  <script>
+    function toggleSubMenu(event, submenuId) {
+      const submenu = document.getElementById(submenuId);
+      const allSubmenus = document.querySelectorAll('.submenu');
+      allSubmenus.forEach(menu => {
+        if (menu !== submenu) {
+          menu.style.display = 'none';
+        }
+      });
+      submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+      submenu.style.top = `${event.target.offsetTop + event.target.offsetHeight}px`;
+      submenu.style.left = `${event.target.offsetLeft}px`;
+    }
+
+    function showText(textId) {
+      const allTexts = document.querySelectorAll('.text-container');
+      allTexts.forEach(text => {
+        text.style.display = 'none';
+      });
+      const selectedText = document.getElementById(textId);
+      if (selectedText) {
+        selectedText.style.display = 'block';
+      }
+    }
+  </script>
+</body>
+</html>
